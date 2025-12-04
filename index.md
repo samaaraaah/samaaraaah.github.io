@@ -1,0 +1,6 @@
+---
+layout: home
+title: How to win the New Yorker caption contest?
+subtitle: A data driven guide on ...
+---
+
