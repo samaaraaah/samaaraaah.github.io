@@ -5,10 +5,8 @@ subtitle: A data driven guide on ...
 cover-img: /assets/img/894.jpg
 ---
 
-
-
-For the past decade, we’ve been studying the New Yorker Caption Contest with the same precision others might reserve for economics or physics. 
-Week after week, we collected and analyzed thousands of captions, millions of votes, shifting humor trends, and the patterns behind what readers consistently find funny.
+Over the last ten years, our team has studied the New Yorker Caption Contest, tracking patterns in humor, themes, and winning captions.
+Week after week, we collected and analyzed thousands of captions, millions of votes, evolving humor trends, and the patterns behind what readers consistently find funny.
 
 Most guides online will tell you how to win the contest, usually based on personal opinion, creative instinct, or a few memorable examples. 
 Some of them even go as far as simply saying: "Be funnier".
