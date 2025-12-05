@@ -82,9 +82,6 @@
     {% endfor %}
   {% endif %}
 
-  <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
-
-
   {% if page.ext-css %}
     {% for css in page.ext-css %}
       {% include ext-css.html css=css %}
