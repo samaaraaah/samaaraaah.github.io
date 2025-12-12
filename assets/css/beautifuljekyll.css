@@ -164,6 +164,24 @@ img {
   transition: padding .5s ease-in-out;
 }
 
+.navbar-custom .container {
+  display: flex;
+  align-items: center;       /* vertical centering */
+  justify-content: space-between; /* left, center, right layout */
+  position: relative;
+}
+
+.navbar-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--header-font);
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: var(--navbar-text-col);
+  white-space: nowrap;
+}
+
 .navbar-custom,
 .navbar-custom.top-nav-short,
 .navbar-custom.top-nav-short-permanent {
@@ -240,8 +258,8 @@ img {
 
 @media (min-width: 1200px) {
   .navbar-custom {
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 
   .navbar-custom .navbar-brand-logo {
@@ -765,7 +783,7 @@ nav.top-nav-short-permanent ~ header > .intro-header.big-img {
     padding: 9.375rem 0;
   }
   .intro-header .page-heading h1 {
-    font-size: 5rem;
+    font-size: 3rem;
   }
   .intro-header .post-heading h1 {
     font-size: 3.125rem;
@@ -1124,3 +1142,5 @@ pre {
     display: inline-block;
   }
 }
+
+@import "custom";

@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'ACaslonPro';
+  src: url('{{ "/assets/fonts/ACaslonPro-Regular.otf" | relative_url }}') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ACaslonPro';
+  src: url('{{ "/assets/fonts/ACaslonPro-Bold.otf" | relative_url }}') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NYIrvin';
+  src: url('{{ "/assets/fonts/NY-Irvin.ttf" | relative_url }}') format('truetype');
+}
+
+body {
+  font-family: 'ACaslonPro', serif !important;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+  font-family: 'NYIrvin', 'ACaslonPro', serif !important;
+}
