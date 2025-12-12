@@ -4,6 +4,27 @@ layout: null
 
 @import url("pygment_highlights.css");
 
+/* local fonts used by the site (ensure these files exist under /assets/fonts/) */
+@font-face {
+  font-family: 'ACaslonPro';
+  src: url('/assets/fonts/ACaslonPro-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'ACaslonPro';
+  src: url('/assets/fonts/ACaslonPro-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'NYIrvin';
+  src: url('/assets/fonts/NY-Irvin.ttf') format('truetype');
+  font-display: swap;
+}
+
 :root {
   /* config file CSS variables */
   --page-col: {{ site.page-col | default: "#FFFFFF" }};
@@ -18,9 +39,9 @@ layout: null
   --footer-link-col: {{ site.footer-link-col | default: "#404040" }};
   --footer-hover-col: {{ site.footer-hover-col | default: "#0085A1" }};
 
-  /* common CSS variables */
-  --body-font: 'Lora', 'Times New Roman', serif;
-  --header-font: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  /* use local fonts: body uses ACaslon, headers use NYIrvin then ACaslon */
+  --body-font: 'ACaslonPro', 'Lora', 'Times New Roman', serif;
+  --header-font: 'NYIrvin', 'ACaslonPro', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --mid-col: #808080;
 }
 
@@ -162,6 +183,11 @@ img {
   -webkit-transition: padding .5s ease-in-out;
   -moz-transition: padding .5s ease-in-out;
   transition: padding .5s ease-in-out;
+}
+
+/* Force the header font for navbar elements in case other rules override it */
+.navbar-custom, .navbar-title, .navbar-custom .navbar-nav .nav-link, .navbar-custom .navbar-brand {
+  font-family: var(--header-font) !important;
 }
 
 .navbar-custom .container {

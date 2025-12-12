@@ -38,7 +38,7 @@ title: HUMOR & CARTOONS
   flex-direction: column;
   justify-content: center; /* vertical centering inside the column */
   align-items: center;     /* horizontal centering inside the column */
-  font-family: 'Georgia', serif;
+  font-family: 'NYIrvin', serif;
   font-size: 1.3rem;
   line-height: 1.6;
   text-align: center;

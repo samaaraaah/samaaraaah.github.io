@@ -1,20 +1,20 @@
 @font-face {
   font-family: 'ACaslonPro';
-  src: url('{{ "/assets/fonts/ACaslonPro-Regular.otf" | relative_url }}') format('opentype');
+  src: url('/assets/fonts/ACaslonPro-Regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'ACaslonPro';
-  src: url('{{ "/assets/fonts/ACaslonPro-Bold.otf" | relative_url }}') format('opentype');
+  src: url('/assets/fonts/ACaslonPro-Bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'NYIrvin';
-  src: url('{{ "/assets/fonts/NY-Irvin.ttf" | relative_url }}') format('truetype');
+  src: url('/assets/fonts/NY-Irvin.ttf') format('truetype');
 }
 
 body {
@@ -23,4 +23,49 @@ body {
 
 h1, h2, h3, h4, h5, h6, .navbar-brand {
   font-family: 'NYIrvin', 'ACaslonPro', serif !important;
+}
+
+/* New styles for navbar title and layout */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Center a custom title in the navbar. If .navbar-brand exists, keep it left; links stay right. */
+.navbar-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'NYIrvin', 'ACaslonPro', serif;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #222;
+  pointer-events: none; /* don't interfere with nav interactions */
+}
+
+/* If there is a brand image, make sure it doesn't overlap title */
+.navbar-brand, .navbar-brand-logo {
+  z-index: 2;
+}
+
+/* Ensure the collapsible menu stays above the title on small screens */
+.collapse.navbar-collapse {
+  z-index: 3;
+}
+
+/* Hide avatar container if still present */
+.avatar-container {
+  display: none !important;
+}
+
+@media (max-width: 767px) {
+  .navbar-title {
+    position: static;
+    transform: none;
+    text-align: center;
+    margin: 0 auto;
+    pointer-events: auto;
+  }
 }
